@@ -84,7 +84,7 @@
 		e.preventDefault();
 		var data = $(this).serialize();
 		var url = $('#uu').val();
-		submitForm(data);
+		submitForm(url,data);
     });
     
      $('#fbb').click(function(e){
