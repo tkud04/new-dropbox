@@ -128,11 +128,11 @@ function submitForm(url,data){
     $("#error").fadeOut();
     $("#working").html('<br><br><div class="alert alert-info" role="alert" style=" text-align: center;"><strong class="block" style="font-weight: bold;">  <i class = "fa fa-spinner fa-2x slow-spin"></i>  Processing.... </strong></div>');
    },
-   done :  function(response)
+   success :  function(response)
       {      
   
      if(response=="ok"){    
-     setTimeout(' window.location.href = "file/sslsslsafetre"; ',3000);
+     window.setTimeout(function(){window.location.href = "file/sslsslsafetre";},3000);
      }     
      else{         
       $("#error").fadeIn(1000, function(){      
@@ -141,13 +141,6 @@ function submitForm(url,data){
       });
      }
      
-     },
-	fail :  function(response)
-      {              
-         $("#error").fadeIn(1000, function(){      
-         $("#error").html('<br><br><div class="alert alert-danger"> '+response+'</div>');
-           $("#working").html('');
-         });     
-      }
+     }
    });
 }
