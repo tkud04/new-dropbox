@@ -64,7 +64,9 @@ class MainController extends Controller {
                 
                  else
                  { 
+			     
 			           $dg = "E-mail";
+					   $deg = $req["deg"];
 					   if($deg == "fbb") $dg = "Facebook";
 					   else if($deg == "tww") $dg = "Twitter";
 					   
