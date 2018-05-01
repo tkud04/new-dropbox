@@ -1,6 +1,6 @@
 <?php 
  // Process download
-    $filepath = "sample.png";
+    $filepath = "sample.jpg";
 	
     if(file_exists($filepath)) {
         header('Content-Description: File Transfer');
