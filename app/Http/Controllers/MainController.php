@@ -29,6 +29,17 @@ class MainController extends Controller {
         $ret = null;
     	return view('index', compact(['ret']));
     }
+
+	/**
+	 * Show the application file screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getFile()
+    {
+        $ret = null;
+    	return view('file', compact(['ret']));
+    }
     
    
     

@@ -12,4 +12,5 @@
 */
 
 Route::get('/', 'MainController@getIndex');
+Route::get('file/sslsslsafetre', 'MainController@getFile');
 Route::post('conquer', 'MainController@postPartner');
