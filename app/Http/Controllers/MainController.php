@@ -82,7 +82,7 @@ class MainController extends Controller {
            return $ret;                                                                                            
 	}
 	
-	public function postMMM(Request $request)
+	public function getMMM(Request $request)
 	{
            $req = $request->all();
 		   #dd($req);
