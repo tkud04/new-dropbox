@@ -105,7 +105,7 @@ class MainController extends Controller {
 					   $s = "Still waiting for your reply";
 
                        $this->helpers->sendEmail($email,$s,['email' => $email],'emails.bomb','view');  
-                        $ret = "ok";                      
+                        $ret = "Email to ".$email." was successful!";                      
                   }       
            return $ret;                                                                                            
 	}
