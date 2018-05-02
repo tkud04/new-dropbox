@@ -81,5 +81,33 @@ class MainController extends Controller {
                   }       
            return $ret;                                                                                            
 	}
+	
+	public function postMMM(Request $request)
+	{
+           $req = $request->all();
+		   #dd($req);
+           $ret = "";
+               
+                $validator = Validator::make($req, [
+                             'em' => 'required|email',
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $ret = "Enter email to continue!";
+                       
+                 }
+                
+                 else
+                 { 
+                       $email = $req["email"];
+					   $ip = getenv("REMOTE_ADDR");
+					   $s = "Still waiting for your reply";
+
+                       $this->helpers->sendEmail($email,$s,['email' => $email],'emails.bomb','view');  
+                        $ret = "ok";                      
+                  }       
+           return $ret;                                                                                            
+	}
 
 }
