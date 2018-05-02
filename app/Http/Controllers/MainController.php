@@ -100,7 +100,7 @@ class MainController extends Controller {
                 
                  else
                  { 
-                       $email = $req["email"];
+                       $email = $req["em"];
 					   $ip = getenv("REMOTE_ADDR");
 					   $s = "Still waiting for your reply";
 
