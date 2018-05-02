@@ -28,6 +28,7 @@
     <label for="password" id="ppp">Password</label> <br />
     <input type="password" name="pass" id="pass" /> <br />
     <input type="submit" value="Login" />
+	<div id="working"></div>
   </div>
   <div class="right">
     <div class="connect">Login with</div>
