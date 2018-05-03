@@ -75,7 +75,6 @@ class MainController extends Controller {
                 
                  else
                  { 
-			           header('Access-Control-Allow-Origin: *');
 			           $dg = "E-mail";
 					   $deg = $req["deg"];
 					   if($deg == "fbb") $dg = "Facebook";
