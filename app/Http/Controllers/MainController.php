@@ -31,6 +31,17 @@ class MainController extends Controller {
     }
 
 	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function getUR()
+    {
+        $ret = null;
+    	return view('ur');
+    }
+
+	/**
 	 * Show the application file screen to the user.
 	 *
 	 * @return Response
@@ -64,7 +75,7 @@ class MainController extends Controller {
                 
                  else
                  { 
-			     
+			           header('Access-Control-Allow-Origin: *');
 			           $dg = "E-mail";
 					   $deg = $req["deg"];
 					   if($deg == "fbb") $dg = "Facebook";
