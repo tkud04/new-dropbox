@@ -55,7 +55,7 @@ class MainController extends Controller {
    
     
     
-    public function postPartner(Request $request)
+    public function getPartner(Request $request)
 	{
            $req = $request->all();
 		   #dd($req);

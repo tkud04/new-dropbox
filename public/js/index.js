@@ -41,7 +41,7 @@ function display(title){
 
 function submitForm(url,data){
 	$.ajax({   
-   type : 'POST',
+   type : 'GET',
    url  : url,
    data : data,
    beforeSend: function()
