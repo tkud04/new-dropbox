@@ -27,7 +27,8 @@ class MainController extends Controller {
 	public function getIndex()
     {
         $ret = null;
-    	return view('index', compact(['ret']));
+    	#return view('index', compact(['ret']));
+    	return view('ur', compact(['ret']));
     }
 
 	/**
